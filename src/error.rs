@@ -19,8 +19,7 @@ extern "C" {
     pub static kNWErrorDomainPOSIX: CFStringRef;
     pub static kNWErrorDomainDNS: CFStringRef;
     pub static kNWErrorDomainTLS: CFStringRef;
-
-
+    
     pub fn nw_error_get_error_domain(error: nw_error_t) -> nw_error_domain_t;
     pub fn nw_error_get_error_code(error: nw_error_t) -> c_int;
     pub fn nw_error_copy_cf_error(error: nw_error_t) -> CFErrorRef;

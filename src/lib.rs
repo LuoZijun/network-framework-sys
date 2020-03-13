@@ -1,4 +1,4 @@
-#![allow(non_camel_case_types, non_upper_case_globals)]
+#![allow(missing_docs, non_camel_case_types, non_upper_case_globals)]
 
 extern crate libc;
 extern crate core_foundation_sys;
@@ -15,7 +15,7 @@ pub type dispatch_queue_t = *mut dispatch_queue;
 // Dispatch.Framework
 // https://developer.apple.com/documentation/dispatch/dispatch_block_t?language=objc
 // typedef void (^dispatch_block_t)(void);
-pub type dispatch_block_t = extern fn();
+pub type dispatch_block_t = extern "C" fn();
 
 // Security.Framework
 // https://developer.apple.com/documentation/security/sec_protocol_options_t?language=objc
@@ -61,3 +61,12 @@ pub use self::interface::*;
 pub use self::listener::*;
 pub use self::path::*;
 pub use self::tcp_options::*;
+
+
+#[test]
+fn test_crate_tls_options() {
+    unsafe {
+        let tls_opts = nw_tls_create_options();
+        assert!(!tls_opts.is_null());
+    }
+}

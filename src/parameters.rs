@@ -91,7 +91,7 @@ extern "C" {
     pub fn nw_parameters_set_prefer_no_proxy(parameters: nw_parameters_t, prefer_no_proxy: bool);
     pub fn nw_parameters_get_prefer_no_proxy(parameters: nw_parameters_t) -> bool;
     pub fn nw_parameters_set_expired_dns_behavior(parameters: nw_parameters_t,
-                                                 expired_dns_behavior: nw_parameters_expired_dns_behavior_t);
+                                                  expired_dns_behavior: nw_parameters_expired_dns_behavior_t);
     pub fn nw_parameters_get_expired_dns_behavior(parameters: nw_parameters_t) -> nw_parameters_expired_dns_behavior_t;
     
 }
