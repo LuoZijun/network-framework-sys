@@ -3,6 +3,9 @@ name = "network-framework-sys"
 version = "0.1.0"
 authors = ["luozijun <luozijun.assistant@gmail.com>"]
 edition = "2018"
+description = "Network.framework bindings for macOS and iOS"
+repository = "https://github.com/LuoZijun/network-framework-sys"
+documentation = "https://docs.rs/network-framework-sys"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
